@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Actor Details</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
+<!--localhost:5000/updateAuthor?id=3&fullName=Manish-->
+</head>
+<body>
+<h1>Author Edit Form</h1>
+<form th:action="@{/updateAuthor}" th:object="${authorToEdit}" method="post">
+<!--    <label for="id">ID</label>-->
+    <input type="hidden" id="id" name="id" th:field="*{id}"/><br/>
+    <label for="fullName">Full Name</label>
+    <input type="text" id="fullName" name="fullName" th:field="*{fullName}"/><br/>
+    <input type="submit" value="Update"/>
+</form>
+</body>
+</html>

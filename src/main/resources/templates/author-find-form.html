@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Author Details</title>
+
+</head>
+<body>
+<h1>Author Find Form</h1>
+<form th:action="@{/findAuthor}" method="post">
+        <label for="id">ID</label>
+    <input type="text" id="id" name="id"/><br/>
+
+    <input type="submit" value="Find"/>
+</form>
+</body>
+</html>

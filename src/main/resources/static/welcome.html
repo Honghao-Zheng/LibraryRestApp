@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Library Searching Engine</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" th:href="@{/css/style.css}" />
+</head>
+<body>
+<div th:insert="fragments/header :: head"></div>
+
+<button class="button-36" role="button"><a th:href="@{/author/create}" >Create A Author</a></button>
+<button>Create A Book</button>
+<button class="button-36" role="button"><a th:href="@{/author/find}">Find Author</a></button>
+<button>Find A Book</button>
+<button class="button-36" role="button"><a th:href="@{/authors}">Find All Authors</a></button>
+<button>Find All Books</button>
+
+
+</body>
+</html>

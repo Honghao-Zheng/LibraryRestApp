@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Author</title>
+    <link rel="stylesheet" type="text/css" th:href="@{../static/css/style.css}" />
+</head>
+<body>
+<h1>Author Details</h1>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Full Name</th>
+        <th>Books</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    </thead>
+    <tr th:each="author : ${authors}">
+        <td th:text="${author.id}"></td>
+        <td th:text="${author.fullName}"></td>
+        <td th:text="${author.books}"></td>
+        <td><a th:href="@{/author/edit/{id}(id=${author.id})}">Edit</a></td>
+        <td><a th:href="@{/author/delete/{id}(id=${author.id})}">Delete</a></td>
+    </tr>
+</table>
+
+
+<!--<div th:insert="fragments/footer :: alternate">This is some text</div>-->
+</body>
+</html>
