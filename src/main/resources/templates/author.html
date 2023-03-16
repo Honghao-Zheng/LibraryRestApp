@@ -7,6 +7,7 @@
 
 </head>
 <body>
+<div th:insert="fragments/style"></div>
 <h1>Author Details</h1>
 <span th:if="${author==null}">Author not found</span>
 <span th:unless="${author==null}">
@@ -24,4 +25,5 @@
 </table>
     </span>
 </body>
+<div th:insert="fragments/footer"></div>
 </html>

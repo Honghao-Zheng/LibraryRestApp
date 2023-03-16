@@ -6,6 +6,7 @@
 
 </head>
 <body>
+<div th:insert="fragments/style"></div>
 <h1>Author Find Form</h1>
 <form th:action="@{/findAuthor}" method="post">
         <label for="id">ID</label>
@@ -13,5 +14,6 @@
 
     <input type="submit" value="Find"/>
 </form>
+<div th:insert="fragments/footer"></div>
 </body>
 </html>

@@ -4,17 +4,21 @@
   <meta charset="UTF-8">
   <title>Library Searching Engine</title>
   <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
+  <div th:insert="fragments/style"></div>
 </head>
 <body>
+
 <div th:insert="fragments/header :: head"></div>
+<div class="buttons" >
+  <button class="button-36" role="button"><a th:href="@{/author/create}" >Create A Author</a></button>
+  <button class="button-30" role="button"><a th:href="@{/book/create}">Create A Book</a></button>
+  <button class="button-36" role="button"><a th:href="@{/author/find}">Find A Author</a></button>
+  <button class="button-30" role="button"><a th:href="@{/book/find}">Find A Book</a></button>
+  <button class="button-36" role="button"><a th:href="@{/authors}">Find All Authors</a></button>
+  <button class="button-30" role="button" ><a th:href="@{/books}">Find All Books</a></button>
+</div>
 
-<button class="button-36" role="button"><a th:href="@{/author/create}" >Create A Author</a></button>
-<button class="button-53" role="button"><a th:href="@{/book/create}">Create A Book</a></button>
-<button class="button-36" role="button"><a th:href="@{/author/find}">Find A Author</a></button>
-<button class="button-53" role="button"><a th:href="@{/book/find}">Find A Book</a></button>
-<button class="button-36" role="button"><a th:href="@{/authors}">Find All Authors</a></button>
-<button class="button-53" role="button" ><a th:href="@{/books}">Find All Books</a></button>
 
-
+<div th:insert="fragments/footer"></div>
 </body>
 </html>

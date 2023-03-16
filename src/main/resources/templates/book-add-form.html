@@ -6,6 +6,7 @@
   <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
 </head>
 <body>
+<div th:insert="fragments/style"></div>
 <h1>Book Add Form</h1>
 <form th:action="@{/createBook}" method="post">
   <!--    <label for="id">ID</label>-->
@@ -19,5 +20,6 @@
 
   <input type="submit" value="Create"/>
 </form>
+<div th:insert="fragments/footer"></div>
 </body>
 </html>

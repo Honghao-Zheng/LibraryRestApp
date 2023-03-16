@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
 </head>
 <body>
+<div th:insert="fragments/style"></div>
 <h1>Book Details</h1>
 <span th:if="${book==null}">Author not found</span>
 <span th:unless="${book==null}">
@@ -24,5 +25,6 @@
     </tr>
 </table>
     </span>
+<div th:insert="fragments/footer"></div>
 </body>
 </html>

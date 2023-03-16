@@ -6,9 +6,10 @@
     <link rel="stylesheet" type="text/css" th:href="@{../static/css/style.css}" />
 </head>
 <body>
+<div th:insert="fragments/style"></div>
 <h1>Author Details</h1>
-<table>
-    <thead>
+<table class="outer">
+    <thead class="table-header">
     <tr>
         <th>ID</th>
         <th>Full Name</th>
@@ -17,13 +18,20 @@
         <th>Delete</th>
     </tr>
     </thead>
-    <tr th:each="author : ${authors}">
+    <tr class="outer" th:each="author : ${authors}">
         <td th:text="${author.id}"></td>
         <td th:text="${author.fullName}"></td>
-        <td th:text="${author.books}"></td>
+            <td >
+            <table >
+                <tr  th:each="book : ${author.books}">
+                    <td class="inner" ><a th:text="${book.title}" th:href="@{/book/{id}(id=${book.id})}"></a></td>
+                </tr>
+            </table>
+            </td>
         <td><a th:href="@{/author/edit/{id}(id=${author.id})}">Edit</a></td>
         <td><a th:href="@{/author/delete/{id}(id=${author.id})}">Delete</a></td>
     </tr>
+    <div th:insert="fragments/footer"></div>
 </table>
 
 

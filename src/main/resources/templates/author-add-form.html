@@ -7,6 +7,7 @@
   <!--localhost:5000/updateAuthor?id=3&fullName=Manish-->
 </head>
 <body>
+<div th:insert="fragments/style"></div>
 <h1>Author Add Form</h1>
 <form th:action="@{/createAuthor}" method="post">
   <!--    <label for="id">ID</label>-->
@@ -15,5 +16,6 @@
   <input type="text" id="fullName" name="fullName"/><br/>
   <input type="submit" value="Create"/>
 </form>
+<div th:insert="fragments/footer"></div>
 </body>
 </html>

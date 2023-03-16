@@ -5,6 +5,7 @@
     <title>Title</title>
 </head>
 <body>
+<div th:insert="fragments/style"></div>
 <p th:text="'Hello ' + ${name}"/>
 <p>Current time is <span th:text="${dateTime}"/></p>
 </body>
